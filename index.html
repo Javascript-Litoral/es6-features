@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 \o/</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1 class="message">ES6 ~ JavaScript Litoral</h1>
+    <pre id="log"></pre>
+  </div>
+
+  <script>
+(function() {
+  if (!console) {
+    console = {};
+  }
+  var old = console.log;
+  var logger = document.getElementById('log');
+  console.log = function(message) {
+    if (typeof message == 'object') {
+      logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : String(message)) + '<br />';
+    } else {
+      logger.innerHTML += message + '<br />';
+    }
+  }
+})();
+  </script>
+  <script src="live.compiled.js"></script>
+  <!--<script src="modules/bundle.js"></script>-->
+</body>
+
+</html>

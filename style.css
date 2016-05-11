@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.message {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  width: 81%;
+  padding: 10px;
+  background-color: #f5da55;
+  border: 2px solid #E3CD62;
+  color: #333333;
+}
+pre {
+  font-size: 1.2em;
+  line-height: 2;
+  width: 80%;
+  padding: 20px;
+  background-color: lightgray;
+  border: 2px solid darkgray;
+  color: darkred;
+  min-height: 300px;
+}
